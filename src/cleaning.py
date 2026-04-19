@@ -87,3 +87,16 @@ def clean_driver_standings(df):
 def clean_constructor_standings(df):
     """Nettoyage de la table constructor_standings."""
     return df.dropna(subset=["constructorStandingsId", "raceId", "constructorId"])
+
+
+def clean_qualifying(df):
+    """
+    Nettoyage de la table qualifying :
+    - Suppression si clés primaires nulles
+    - Création flag 'reached_q3' : le pilote a atteint la Q3 (top 10)
+    - Création flag 'pole_position' : le pilote a décroché la pole
+    """
+    df = df.dropna(subset=["qualifyId", "raceId", "driverId"])
+    df = df.withColumn("reached_q3", F.col("q3").isNotNull())
+    df = df.withColumn("pole_position", F.col("position") == 1)
+    return df

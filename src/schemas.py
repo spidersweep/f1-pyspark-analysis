@@ -81,6 +81,19 @@ schema_driver_standings = StructType([
     StructField("wins",              IntegerType(), True),
 ])
 
+# ---------- qualifying.csv ----------
+schema_qualifying = StructType([
+    StructField("qualifyId",     IntegerType(), True),
+    StructField("raceId",        IntegerType(), True),
+    StructField("driverId",      IntegerType(), True),
+    StructField("constructorId", IntegerType(), True),
+    StructField("number",        IntegerType(), True),
+    StructField("position",      IntegerType(), True),
+    StructField("q1",            StringType(),  True),
+    StructField("q2",            StringType(),  True),
+    StructField("q3",            StringType(),  True),
+])
+
 # ---------- circuits.csv ----------
 schema_circuits = StructType([
     StructField("circuitId",  IntegerType(), True),
