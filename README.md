@@ -57,9 +57,9 @@ Compare drivers within the same team to reduce car bias and better measure indiv
 
 ## 👩‍💻 Author
 
-Salma ALAOUI MRANI
-Lara CUNHA
-Ibrahima Fa LO
-Karissy CISSE
+* Salma ALAOUI MRANI
+* Lara CUNHA
+* Ibrahima Fa LO
+* Karissy CISSE
 
 M1 Big Data – Université Sorbonne Paris Nord  
